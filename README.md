@@ -1,29 +1,19 @@
 # migrate-vite
 
-## Project setup
-```
-yarn install
-```
+This repository is intended for migration from `vue-cli` to `vite`
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## flow
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. create project by vue-cli  
+ts + vue3 + jest + prettier
+1. remove `vue-cli`  
+remove from package.json by manually.  
+    - @vue/*
+    - core-js
+1. add `vite`  
+`yarn add -D vite jest ts-jest`
+1. modify scripts in package.json
+1. move public/index.html to root
+1. modify jest.config.js  
+remove preset. add roots, testMatch. modify transform
+1. remove webpack placeholder from index.html
